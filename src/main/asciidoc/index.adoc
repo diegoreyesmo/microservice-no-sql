@@ -1,0 +1,76 @@
+= Microservicio no-sql
+
+Microservicio publicado en el puerto 8080 que centraliza las conexiones a la base de datos no-sql del sistema.
+
+== CRUD
+
+=== CREATE
+Inserta un nuevo documento.
+
+==== Path Parameters
+include::{snippets}/create/path-parameters.adoc[]
+==== Request Fields
+include::{snippets}/create/request-fields.adoc[]
+==== Response Fields
+include::{snippets}/create/response-fields.adoc[]
+==== Ejemplo de request/response
+include::{snippets}/create/curl-request.adoc[]
+include::{snippets}/create/http-response.adoc[]
+
+
+=== READ
+Obtiene un documento según su ID.
+
+==== Path Parameters
+include::{snippets}/read/path-parameters.adoc[]
+==== Response Fields
+include::{snippets}/read/response-fields.adoc[]
+==== Ejemplo de request/response
+include::{snippets}/read/curl-request.adoc[]
+include::{snippets}/read/http-response.adoc[]
+
+
+=== UPDATE 
+Actualiza un documento según su ID.
+
+==== Path Parameters
+include::{snippets}/update-set/path-parameters.adoc[]
+==== Request Fields
+include::{snippets}/update-set/request-fields.adoc[]
+==== Response Fields
+include::{snippets}/update-set/response-fields.adoc[]
+==== Ejemplo de request/response ($set)
+include::{snippets}/update-set/curl-request.adoc[]
+include::{snippets}/update-set/http-response.adoc[]
+==== Ejemplo de request/response ($push)
+include::{snippets}/update-push/curl-request.adoc[]
+include::{snippets}/update-push/http-response.adoc[]
+
+
+
+=== DELETE
+Elimina un documento según su ID.
+
+==== Path Parameters
+include::{snippets}/delete/path-parameters.adoc[]
+==== Response Fields
+include::{snippets}/delete/response-fields.adoc[]
+==== Ejemplo de request/response
+include::{snippets}/delete/curl-request.adoc[]
+include::{snippets}/delete/http-response.adoc[]
+
+== SEARCH
+Busca o cuenta documentos según filtros indicados.
+
+==== Path Parameters
+include::{snippets}/search/path-parameters.adoc[]
+==== Request Fields
+include::{snippets}/search/request-fields.adoc[]
+==== Response Fields
+include::{snippets}/search/response-fields.adoc[]
+==== Ejemplos de request/response
+include::{snippets}/search/curl-request.adoc[]
+include::{snippets}/search/http-response.adoc[]
+==== Ejemplos de request/response (count)
+include::{snippets}/search-count/curl-request.adoc[]
+include::{snippets}/search-count/http-response.adoc[]

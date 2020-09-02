@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "2b6e6635-e1a7-4456-b208-45d6256b6c60",
+		"name": "nosql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "no-sql search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":{\n\t\t\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{hostname}}:8080/server/mails/search",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8080",
+					"path": [
+						"server",
+						"mails",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no-sql create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"new-documents\":\n\t[\n\t\t{\n\t        \"sender\": \"doc1\",\n\t        \"subject\": \" 2019_11_18_1024\"\n\t    },\n\t    {\n\t        \"sender\": \"doc2\",\n\t        \"subject\": \" 2019_11_18_1024\"\n\t    }\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{hostname}}:8080/server/mails",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8080",
+					"path": [
+						"server",
+						"mails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no-sql read",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{hostname}}:8080/server/mails/5dd29f31e6d9de05bd14104d",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8080",
+					"path": [
+						"server",
+						"mails",
+						"5dd29f31e6d9de05bd14104d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no-sql update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"updated-document\":{\n       \"sender\": \"postmanB\"\n\t}\n\t\n}"
+				},
+				"url": {
+					"raw": "{{hostname}}:8080/server/mails/5dd29f31e6d9de05bd14104d",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8080",
+					"path": [
+						"server",
+						"mails",
+						"5dd29f31e6d9de05bd14104d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no-sql delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{hostname}}:8080/server/mails/5dd22d33ad78aa189d134bd0",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8080",
+					"path": [
+						"server",
+						"mails",
+						"5dd22d33ad78aa189d134bd0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

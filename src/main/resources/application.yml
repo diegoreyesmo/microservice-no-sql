@@ -1,0 +1,53 @@
+---
+## Server
+server:
+  port: 8080
+  compression:
+    enabled: true
+    minResponseSize: 256
+    mimeTypes:
+      - "application/json"
+
+## Management
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    git:
+      mode: "full"
+
+
+logging:
+  file:
+    name: logs/spring.log
+## Spring
+spring:
+  jackson:
+    property-naming-strategy: KEBAB_CASE
+  jmx:
+    enabled: true
+
+## MongoDB
+mongodb:
+  user: "user"
+  password: "66,M}G%x{'{,F:jH4,JXEG:g3~zm)qAw"
+  source: "admin"
+  hostname: "localhost"
+  port: 27017
+
+## Ribbon
+ribbon:
+  ConnectTimeout: 100000
+  ReadTimeout: 100000
+  eureka:
+    enabled: false
+
+## Eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
